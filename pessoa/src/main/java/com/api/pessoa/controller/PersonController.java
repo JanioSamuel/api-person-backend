@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,12 @@ public class PersonController {
 	private PersonService personService;
 	
 	@Autowired
-	private Validator validation;
+	@Qualifier("PersonValidator")
+	private Validator personValidation;
+	
+	@Autowired
+	@Qualifier("TaxpayerValidator")
+	private Validator taxpayerValidation;
 
 	@RequestMapping(value = "/person", method = RequestMethod.GET)
 	public @ResponseBody List<Person> findAll() {
@@ -32,13 +38,14 @@ public class PersonController {
 	}
 
 	@RequestMapping(value = "/person", method = RequestMethod.POST)
-	public Person insertPerson(@Valid @RequestBody Person person) {
+	public Person insertPerson(@Valid @RequestBody Person person) throws Exception {
+		taxpayerValidation.validate(person);
 		return personService.insertPerson(person);
 	}
 
 	@RequestMapping(value = "/person", method = RequestMethod.PUT)
 	public Person editPerson(@Valid @RequestBody Person person) throws Exception {
-		validation.validate(person);
+		personValidation.validate(person);
 		return personService.editPerson(person);
 	}
 

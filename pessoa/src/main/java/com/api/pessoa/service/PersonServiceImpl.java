@@ -1,6 +1,6 @@
 package com.api.pessoa.service;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +24,14 @@ public class PersonServiceImpl implements PersonService {
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 	public Person insertPerson(Person person) {
-		person.setCreatedAt(LocalDate.now());
-		person.setUpdatedAt(LocalDate.now());
+		person.setCreatedAt(LocalDateTime.now());
+		person.setUpdatedAt(LocalDateTime.now());
 		return repository.save(person);
 	}
 
 	@Override
 	public Person editPerson(Person person) {
-		person.setUpdatedAt(LocalDate.now());
+		person.setUpdatedAt(LocalDateTime.now());
 		return repository.save(person);
 	}
 

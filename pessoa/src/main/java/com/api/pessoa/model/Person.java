@@ -1,6 +1,7 @@
 package com.api.pessoa.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,8 +46,8 @@ public class Person {
 	@Column(name = "place_birth")
 	private String placeBirth;
 	
-	@Column(name = "citizienship")
-	private String citizienship;
+	@Column(name = "citizenship")
+	private String citizenship;
 	
 	@Column(name = "taxpayer_id")
 	@CPF(message = "taxpayerId is invalid")
@@ -54,10 +55,10 @@ public class Person {
 	private String taxpayerId;
 	
 	@Column(name = "created_at")
-	private LocalDate createdAt;
+	private LocalDateTime createdAt;
 	
 	@Column(name = "updated_at")
-	private LocalDate updatedAt;
+	private LocalDateTime updatedAt;
 
 	public Integer getId() {
 		return id;
@@ -108,11 +109,11 @@ public class Person {
 	}
 
 	public String getCitizienship() {
-		return citizienship;
+		return citizenship;
 	}
 
 	public void setCitizienship(String citizienship) {
-		this.citizienship = citizienship;
+		this.citizenship = citizienship;
 	}
 
 	public String getTaxpayerId() {
@@ -123,19 +124,19 @@ public class Person {
 		this.taxpayerId = taxpayerId;
 	}
 
-	public LocalDate getCreatedAt() {
+	public LocalDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(LocalDate createdAt) {
+	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
-	public LocalDate getUpdatedAt() {
+	public LocalDateTime getUpdatedAt() {
 		return updatedAt;
 	}
 
-	public void setUpdatedAt(LocalDate updatedAt) {
+	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 	
