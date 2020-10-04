@@ -1,0 +1,21 @@
+2020-10-03 13:21:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSONS" already exists; SQL statement:
+CREATE TABLE persons ( id INT AUTO_INCREMENT PRIMARY KEY, person_name VARCHAR(250) NOT NULL, gender VARCHAR(1), email VARCHAR(250), birth_date DATE NOT NULL, place_birth VARCHAR(20), citizienship VARCHAR(20), taxpayer_id VARCHAR(20) NOT NULL, created_at DATE NOT NULL, updated_at DATE NOT NULL ) [42101-200]
+2020-10-03 13:22:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" already exists; SQL statement:
+CREATE TABLE admins ( id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(250) NOT NULL, user_password VARCHAR(250) NOT NULL ) [42101-200]
+2020-10-03 13:23:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" already exists; SQL statement:
+CREATE TABLE admins ( id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(250) NOT NULL, user_password VARCHAR(250) NOT NULL ) [42101-200]
+2020-10-03 13:23:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" already exists; SQL statement:
+CREATE TABLE admins ( id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(250) NOT NULL, user_password VARCHAR(250) NOT NULL ) [42101-200]
+2020-10-03 13:24:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" already exists; SQL statement:
+CREATE TABLE admins ( id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(250) NOT NULL, user_password VARCHAR(250) NOT NULL ) [42101-200]
+2020-10-03 13:24:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ADMINS" already exists; SQL statement:
+CREATE TABLE admins ( id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(250) NOT NULL, user_password VARCHAR(250) NOT NULL ) [42101-200]
+2020-10-03 13:25:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PERSONS" already exists; SQL statement:
+CREATE TABLE persons ( id INT AUTO_INCREMENT PRIMARY KEY, person_name VARCHAR(250) NOT NULL, gender VARCHAR(1), email VARCHAR(250), birth_date DATE NOT NULL, place_birth VARCHAR(20), citizienship VARCHAR(20), taxpayer_id VARCHAR(20) NOT NULL, created_at DATE NOT NULL, updated_at DATE NOT NULL ) [42101-200]
