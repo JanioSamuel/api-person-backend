@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,7 @@ import com.api.pessoa.validation.Validator;
 
 @RestController
 @RequestMapping("/api/v1")
+@CrossOrigin("https://api-person-frontend.herokuapp.com/")
 public class PersonController {
 
 	@Autowired

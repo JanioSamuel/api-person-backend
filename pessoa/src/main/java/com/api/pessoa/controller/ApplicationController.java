@@ -1,5 +1,8 @@
 package com.api.pessoa.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,13 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://api-person-frontend.herokuapp.com/")
 public class ApplicationController {
 
 
 	@RequestMapping(value = "/source", method = RequestMethod.GET)
-	public @ResponseBody String getGithubLink() {
-		return "https://github.com/JanioSamuel/api-person-backend";
+	public @ResponseBody Map<String, String> getGithubLink() {
+		Map<String, String> sources = new HashMap<>();
+		sources.put("backend", "https://github.com/JanioSamuel/api-person-backend");
+		sources.put("frontend", "https://github.com/JanioSamuel/api-person-frontend");
+		return sources;
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
