@@ -108,12 +108,12 @@ public class Person {
 		this.placeBirth = placeBirth;
 	}
 
-	public String getCitizienship() {
+	public String getCitizenship() {
 		return citizenship;
 	}
 
-	public void setCitizienship(String citizienship) {
-		this.citizenship = citizienship;
+	public void setCitizenship(String citizenship) {
+		this.citizenship = citizenship;
 	}
 
 	public String getTaxpayerId() {
